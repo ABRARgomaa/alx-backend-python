@@ -59,7 +59,8 @@ class TestGetJson(unittest.TestCase):
         response = get_json(test_url)
         mock_get.assert_called_once_with(test_url)
         json_data = response.json()
-        self.assertEqual(json_data, test_payload, f"expected to be {test_payload} but got {json_data}")
+        self.assertEqual(json_data, test_payload,
+                         f"expected to be {test_payload} but got {json_data}")
 
 
 if __name__ == '__main__':
